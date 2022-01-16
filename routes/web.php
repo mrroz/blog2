@@ -15,6 +15,10 @@ Route::get('/panel',[PostController::class,'panel'])->name('post.panel');
 
 Route::post('/panel',[PostController::class,'create'])->name('post.create');
 
+Route::get('/panel/delete',[PostController::class,'delete'])->name('post.delete');
+
+Route::get('/panel/{id}',[PostController::class,'destroy'])->name('post.destroy');
+
 
 
 

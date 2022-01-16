@@ -54,7 +54,14 @@
 
              <section class="item-img">
                  <section class="img-slider fade">
-                    <img src="{{asset($post->file)}}" alt="{{$post->title}}">
+
+
+                  @if ($post->file==null)
+                  <img src="../img/img1.jpg" alt="a">
+                  @else
+                  <img src="{{asset($post->file)}}" alt="">
+                  @endif
+
 
 
                  </section>

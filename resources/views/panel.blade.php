@@ -41,6 +41,10 @@
         </section>
 
 
+
+
+
+
         @foreach ($posts as $key => $post)
 
         <section class="app-item-container">
@@ -93,10 +97,26 @@
                      </section>
                  </section>
                  <section class="item-contact">
-                     <button  style="background-color: red">
-                         <i class="fas fa-trash"></i>
-                         <span>حذف</span>
-                     </button>
+
+                    {{--  <form action="{{route('post.delete',$post->id)}}" method="GET">
+                        @csrf
+                       @method('GET')
+                        <button  style="background-color: red" type="submit">
+                            <i class="fas fa-trash"></i>
+                            <span>{{$post->id}}</span>
+                        </button>
+                    </form>  --}}
+
+
+                    <form action="{{ route('post.destroy', $post->id)}}"  method="GET">
+
+                        @csrf
+                        @method('get')
+                        <button type="submit" style="background-color: red" >
+                            <span>{{$post->id}}</span>
+                        </button>
+                    </form>
+
                  </section>
              </section>
 

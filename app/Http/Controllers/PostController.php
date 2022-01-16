@@ -6,6 +6,7 @@ use App\Models\Post;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class PostController extends Controller
 {
@@ -33,6 +34,8 @@ class PostController extends Controller
 
 public function create(Request $request){
 
+
+
     // dd($request->all()) ;
 
     $file = time().'.'.$request->file->getClientOriginalExtension();
@@ -55,6 +58,33 @@ public function create(Request $request){
 
      return  redirect()->route('post.panel')->with('msg','اضاف شد');
  }
+
+
+
+
+
+
+ public function delete(Post $post){
+
+    $posts =Post::all();
+   // dd($posts[2]->id->delete());
+   return $post;
+   // $post->delete();
+     return  redirect()->route('post.panel')->with('msg',' حذف');
+
+}
+
+
+public function destroy($id)
+    {
+
+        //return $id;
+        //dd($id);
+         $advertise = Post::find($id);
+         $advertise->delete();
+         return  redirect()->route('post.panel')->with('msg',' حذف');
+    }
+
 
 
 
