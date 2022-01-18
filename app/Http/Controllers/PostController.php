@@ -32,6 +32,15 @@ class PostController extends Controller
 }
 
 
+public function panel2(){
+
+    $posts =Post::all();
+
+    return view('panel_2',['posts'=>$posts->reverse()]);
+
+}
+
+
 public function create(Request $request){
 
 
@@ -56,7 +65,7 @@ public function create(Request $request){
 
      ]);
 
-     return  redirect()->route('post.panel')->with('msg','اضاف شد');
+     return  redirect()->route('post.panel2')->with('msg','اضاف شد');
  }
 
 
@@ -70,7 +79,7 @@ public function create(Request $request){
    // dd($posts[2]->id->delete());
    //return $post;
    // $post->delete();
-     return  redirect()->route('post.panel')->with('msg',' حذف');
+     return  redirect()->route('post.panel2')->with('msg',' حذف');
 
 }
 
@@ -82,7 +91,7 @@ public function destroy($id)
         //dd($id);
          $advertise = Post::find($id);
          $advertise->delete();
-         return  redirect()->route('post.panel')->with('msg',' حذف');
+         return  redirect()->route('post.panel2')->with('msg',' حذف');
     }
 
 

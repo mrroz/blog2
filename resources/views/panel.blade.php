@@ -49,9 +49,7 @@
 
         <section class="app-item-container">
 
-
          <article class="app-item">
-
 
              <section class="item-img">
                  <section class="img-slider fade">
@@ -62,7 +60,6 @@
                  <section class="img-slider fade">
                     <img src="../img/img1.jpg" alt="a">
 
-
                  </section>
                  <section class="img-slider fade">
                      <img src="../img/img3.jpg" alt="d">
@@ -70,7 +67,6 @@
                  <a class="prev">&#10095;</a>
                  <a class="next">&#10094;</a>
              </section>
-
 
             <section class="item-info">
                  <section>
@@ -98,16 +94,6 @@
                  </section>
                  <section class="item-contact">
 
-                    {{--  <form action="{{route('post.delete',$post->id)}}" method="GET">
-                        @csrf
-                       @method('GET')
-                        <button  style="background-color: red" type="submit">
-                            <i class="fas fa-trash"></i>
-                            <span>{{$post->id}}</span>
-                        </button>
-                    </form>  --}}
-
-
                     <form action="{{ route('post.destroy', $post->id)}}"  method="GET">
 
                         @csrf
@@ -120,10 +106,7 @@
                  </section>
              </section>
 
-
          </article>
-
-
 
 
      </section>
