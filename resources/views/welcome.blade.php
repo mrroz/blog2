@@ -20,7 +20,7 @@
         </nav>
         <nav class="menu-container" id="menu">
             <ul class="header-menu ">
-                <li class="header-menu-item">   <a class="header-menu-item-link" href=""> ورود </a></li>
+                {{--  <li class="header-menu-item">   <a class="header-menu-item-link" href=""> ورود </a></li>  --}}
                 <li class="header-menu-item"><a class="header-menu-item-link" href="#app"> خرید </a></li>
                 <li class="header-menu-item"><a class="header-menu-item-link" href="#app"> رهن و اجاره </a></li>
                 <li class="header-menu-item" onclick="openNav()"><a class="header-menu-item-link"
@@ -82,7 +82,7 @@
                  <section>
                      <section class="item-caption">
                          <ul>
-                             <li class="price">شماره : {{$key+1}} </li>
+                             {{--  <li class="price">شماره : {{$key+1}} </li>  --}}
                              <li class="price"> {{$post->price}} تومان </li>
                              <li class="area">{{$post->address}}</li>
                              <li class="type">{{$post->type}}</li>

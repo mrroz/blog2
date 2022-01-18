@@ -68,7 +68,7 @@ public function create(Request $request){
 
     $posts =Post::all();
    // dd($posts[2]->id->delete());
-   return $post;
+   //return $post;
    // $post->delete();
      return  redirect()->route('post.panel')->with('msg',' حذف');
 

@@ -256,6 +256,12 @@
 
 .img-slider {
     display: none;
+    text-align: center;
+}
+
+.img-slider img {
+    min-height: 200px;
+    max-height: 300px;
 }
 
 .active-slide {
@@ -455,6 +461,9 @@
     }
     .item-info {
         width: 90%;
+    }
+    .item-info-list {
+        max-width: 215px;
     }
 }
 

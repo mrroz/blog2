@@ -76,7 +76,7 @@
                  <section>
                      <section class="item-caption">
                          <ul>
-                             <li class="price">شماره : {{$key+1}} </li>
+                             {{--  <li class="price">شماره : {{$key+1}} </li>  --}}
                              <li class="price"> {{$post->price}} تومان </li>
                              <li class="area">{{$post->address}}</li>
                              <li class="type">{{$post->type}}</li>
@@ -113,7 +113,7 @@
                         @csrf
                         @method('get')
                         <button type="submit" style="background-color: red" >
-                            <span>{{$post->id}}</span>
+                            <span>حذف</span>
                         </button>
                     </form>
 
